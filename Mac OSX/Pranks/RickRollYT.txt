@@ -1,0 +1,30 @@
+REM Title:	Generic YouTube Link
+REM Author: Spencer Au
+REM Description: Opens RickRoll Video on Youtube and plays, sets volume to 10, and closes the terminal window
+REM Target:	macOS 11.0+
+REM
+REM Set ID to an Apple Keyboard
+ID 05ac:021e Apple:Keyboard
+DELAY 700
+REM Open up Spotlight Search
+GUI SPACE
+DELAY 500
+REM Open up Terminal
+STRING terminal
+DELAY 100
+ENTER
+DELAY 1000
+REM Set StringDelay to 20ms, and then have it type in the link
+STRINGDELAY 20
+STRING open https://youtu.be/dQw4w9WgXcQ
+ENTER
+DELAY 1000
+REM Switch to Youtube Window
+GUI TAB
+DELAY 100
+REM set volume to 10, kill terminal window, and play video
+STRINGDELAY 30
+STRING osascript -e 'set volume 10' && killall Terminal
+ENTER
+DELAY 1500
+STRING f

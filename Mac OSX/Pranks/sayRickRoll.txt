@@ -1,0 +1,23 @@
+REM Title:
+REM Author: Spencer Au
+REM Description: 
+REM Target:	macOS 11.0+
+REM
+REM Set ID to an Apple Keyboard
+ID 05ac:021e Apple:Keyboard
+DELAY 700
+REM Open up Spotlight Search
+GUI SPACE
+DELAY 500
+REM Open up Terminal
+STRING terminal
+DELAY 100
+ENTER
+DELAY 1000
+REM Set StringDelay to 20ms, and then have it type in the link
+STRINGDELAY 20
+STRING osascript -e 'set volume 10'
+ENTER
+REM Change Youtube Link below to your desired link
+STRING say this is an example text
+ENTER
