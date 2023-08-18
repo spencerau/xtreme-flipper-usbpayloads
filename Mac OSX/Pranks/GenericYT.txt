@@ -5,6 +5,7 @@ REM Target:	macOS 11.0+
 REM
 REM Set ID to an Apple Keyboard
 ID 05ac:021e Apple:Keyboard
+
 DELAY 700
 REM Open up Spotlight Search
 GUI SPACE
